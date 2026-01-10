@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const p = document.querySelector('.profile img');
     if (!p) return;
     const formal = 'assets/img/formal1x1.jpg';
-    const casual = 'assets/img/smile-informal.gif';
+    const casual = 'assets/img/me17.jpg';
 
     p.addEventListener('click', () => {
       p.src = p.src.includes(formal) ? casual : formal;
@@ -21,16 +21,36 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 
   // theme toggle (uses CSS custom properties)
-  (function themeToggle(){
-    const themeToggleBtn = document.getElementById('themeToggle'); // optional button
-    const root = document.documentElement;
-    const stored = localStorage.getItem('site-theme');
-    if (stored === 'dark') root.classList.add('theme-dark');
+//   Temporary disable theme toggle due top being buggy
+//   (function themeToggle(){
+//     const themeToggleBtn = document.getElementById('themeToggle'); // optional button
+//     const root = document.documentElement;
+//     const stored = localStorage.getItem('site-theme');
+//     if (stored === 'dark') root.classList.add('theme-dark');
 
-    if (!themeToggleBtn) return;
-    themeToggleBtn.addEventListener('click', () => {
-      const isDark = root.classList.toggle('theme-dark');
-      localStorage.setItem('site-theme', isDark ? 'dark' : 'light');
-    });
-  })();
+//     if (!themeToggleBtn) return;
+//     themeToggleBtn.addEventListener('click', () => {
+//       const isDark = root.classList.toggle('theme-dark');
+//       localStorage.setItem('site-theme', isDark ? 'dark' : 'light');
+//     });
+//   })();
+
+//     const toggle = document.getElementById('themeToggle');
+//     const icon = toggle.querySelector('i');
+
+//     const setTheme = (dark) => {
+//     document.documentElement.classList.toggle('theme-dark', dark);
+//     icon.className = dark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+//     localStorage.setItem('theme', dark ? 'dark' : 'light');
+//     };
+
+//     // Load theme
+//     const savedTheme = localStorage.getItem('theme');
+//     setTheme(savedTheme === 'dark');
+
+//     // Toggle
+//     toggle.addEventListener('click', () => {
+//     const isDark = document.documentElement.classList.contains('theme-dark');
+//     setTheme(!isDark);
+//     });
 });

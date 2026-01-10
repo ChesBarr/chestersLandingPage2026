@@ -1,55 +1,224 @@
 :root{
-  /* Bootstrap token overrides (keeps btn-primary etc. dynamic) */
-  --bs-primary: #0d6efd;
-  --bs-secondary: #6c757d;
+  --bs-primary: #0d6efd;     /* default bootstrap primary */
+  --bs-secondary: #6c757d;   /* default secondary */
+  --accent: var(--bs-primary);
 
-  /* layout tokens */
   --bg: #f7f8fb;
   --card: #ffffff;
+  --text: #0b1220;
   --muted: #6b7280;
+  --muted-contrast: #9aa4b2;
+  --card-border: rgba(11,18,32,0.06);
+}
+
+/* Temporary disable theme toggle due top being buggy */
+/* DARK THEME (applied by .theme-dark on <html> or <body>) */
+/* .theme-dark {
+  --bs-primary: #0ea5a4;    /* optional override in dark /
+  --bs-secondary: #8b8ea6;
   --accent: var(--bs-primary);
-}
 
-/* Optional dark theme: toggle by adding .theme-dark to <html> or <body> */
-.theme-dark {
-  --bg: #0b1220;
-  --card: #08111a;
-  --muted: #9aa4b2;
-  --bs-primary: #0ea5a4; /* example */
+  --bg: #070914;            /* dark background /
+  --card: #0f1724;          /* card background /
+  --text: #e6eef7;          /* readable text color /
+  --muted: #b6c7da;         /* muted text in dark /
+  --muted-contrast: #9aa4b2;
+  --card-border: rgba(255,255,255,0.06);
   color-scheme: dark;
+} */
+
+/* Base layout using variables */
+html,body{
+  height:100%;
+  margin:0;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
 }
 
-/* Base */
-* { box-sizing: border-box; }
-html,body { height:100%; margin:0; font-family: Inter, system-ui, Arial, sans-serif; background:var(--bg); color:#0b1220; }
-
-/* NAV */
-.site-navbar { backdrop-filter: blur(6px); background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.75)); }
-.site-brand{ font-weight:700; letter-spacing:0.2px; }
-
-/* HERO */
-.hero{ padding:4rem 0; display:flex; align-items:center; gap:2rem; }
-.profile{ width:160px; height:160px; border-radius:18px; overflow:hidden; border:6px solid #fff; box-shadow:0 8px 30px rgba(11,18,32,0.08); }
-.hero h1{ font-size:1.6rem; margin-bottom:.25rem; }
-.lead{ margin-bottom:1rem; color:var(--muted); }
-
-/* Skill badge small utility */
-.skill-badge{ display:inline-flex; align-items:center; gap:.6rem; padding:.45rem .6rem; border-radius:999px; border:1px solid rgba(11,18,32,0.06); background:linear-gradient(180deg,#fff,#fafafa); box-shadow:0 2px 6px rgba(11,18,32,0.03); font-weight:600; }
-.skill-icon{ width:28px; height:28px; display:inline-flex; align-items:center; justify-content:center; }
-
-/* Cards, projects */
-.card.project-card img{ height:180px; object-fit:cover; border-bottom-left-radius:8px; border-bottom-right-radius:8px; }
-
-/* Footer */
-footer{ background:#0b1220; color:#fff; padding:3rem 0; }
-footer a{ color:inherit; text-decoration:none; }
-
-/* Small utilities */
-.muted{ color:var(--muted); }
-.section-title{ font-weight:700; margin:3rem 0 1.25rem; }
-
-/* responsiveness */
-@media (max-width:767.98px){
-  .hero{ flex-direction:column; align-items:center; text-align:center; }
-  .profile{ width:140px; height:140px; }
+/* NAV adapts to theme (you already set nav background inline, but this helps elsewhere) */
+.site-navbar {
+  background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.75));
+  border-bottom: 1px solid var(--card-border);
 }
+.theme-dark .site-navbar {
+  background: linear-gradient(180deg, rgba(10,14,20,0.85), rgb(50, 51, 86));
+  border-bottom-color: rgba(255,255,255,0.06);
+}
+
+/* HERO: protect the profile from being squeezed by long text */
+.hero {
+  padding: 3.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* The profile should not shrink below a fixed width */
+.profile {
+  flex: 0 0 180px;     /* fixed basis so long text won't squeeze it */
+  width: 180px;
+  height: 180px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 6px solid #fff;
+  box-shadow: 0 8px 30px rgba(11,18,32,0.08);
+  background: var(--card);
+}
+
+/* ensure text area can shrink properly and wrap */
+.hero .flex-fill {
+  flex: 1 1 0%;
+  min-width: 0;        /* critical for long text inside flex */
+}
+
+/* make long lead text wrap but not push the layout */
+.lead {
+  margin-bottom: 1rem;
+  color: var(--muted);
+  line-height: 1.45;
+  max-width: 60ch;     /* keeps lines readable and avoids overly wide wrap */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Cards should adapt to theme */
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  color: var(--text);
+}
+
+/* In dark theme, progress bars should remain visible */
+/* .progress {
+  background-color: rgba(255,255,255,0.06);
+  height: 8px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.progress .progress-bar {
+  /* progress bar colors still use bootstrap classes, but ensure contrast on dark */
+  box-shadow: none;
+} */
+
+/* Specific overrides for increased visibility on dark */
+.theme-dark .progress-bar.bg-success { background-color: #16a34a; }
+.theme-dark .progress-bar.bg-warning { background-color: #f59e0b; }
+.theme-dark .progress-bar.bg-primary { background-color: var(--bs-primary); }
+.theme-dark .progress-bar.bg-danger  { background-color: #ef4444; }
+.theme-dark .progress-bar.bg-info    { background-color: #38bdf8; }
+
+/* Muted text mapping for dark */
+.muted { color: var(--muted); }
+.theme-dark .muted { color: var(--muted-contrast); }
+
+/* Card images and text color for dark theme */
+.card .card-img-top { background: #000; }
+.theme-dark .card .card-img-top { filter: brightness(.9) contrast(.95); }
+
+/* Footer theme */
+footer {
+  background: #0b1220;
+  color: #fff;
+}
+.theme-dark footer {
+  background: #071027;
+}
+
+/* Small responsive tweaks */
+@media (max-width: 767.98px) {
+  .hero{ flex-direction: column; align-items: center; text-align: center; }
+  .profile{ width:140px; height:140px; flex:0 0 140px; }
+  .lead { max-width: 80ch; }
+}
+
+/* NAVBAR BASE */
+.site-navbar {
+  background-color: #323356;
+}
+
+/* NAVBAR TEXT COLORS */
+.site-navbar .navbar-brand,
+.site-navbar .nav-link {
+  color: #000 !important;
+}
+
+.site-navbar .nav-link:hover {
+  color: #000 !important;
+}
+
+/* Small muted name fix */
+.site-navbar .text-muted {
+  color: #000 !important;
+}
+
+/* Dark mode stays the same (already dark) */
+.theme-dark .site-navbar {
+  background-color: #1b1e44;
+}
+
+/* SKILL BADGES */
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* NORMALIZE ICON SIZE */
+/* normalize skill icons */
+.skill-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: inline-block;
+}
+.skill-badge img { vertical-align: middle; }
+
+/* MODAL DARK MODE SUPPORT */
+.theme-dark .modal-content {
+  background-color: #0f1724;
+  color: var(--text);
+}
+
+.theme-dark .modal-header,
+.theme-dark .modal-footer {
+  border-color: rgba(255,255,255,0.08);
+}
+
+.theme-dark .modal-title {
+  color: #ffffff;
+}
+
+/* Close button visibility */
+.theme-dark .btn-close {
+  filter: invert(1);
+}
+
+/* ensure small metadata in cards remains readable */
+.card small {
+  color: #6c757d; /* bootstrap muted color in light mode */
+  font-size: 0.85rem;
+}
+/* If you later re-enable dark theme you'll need to update this for .theme-dark .card small. */
+
+/* disable project button */
+.btn[disabled] {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+/* icon sizing and spacing for socials */
+.social-btn i, .social-btn .bi {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+/* optional: slightly larger on hover */
+.social-btn:hover i { transform: translateY(-1px); }
