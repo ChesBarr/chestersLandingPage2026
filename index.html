@@ -1,11 +1,348 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chester Dapatnapo</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chester Dapatnapo — Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font (Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-k6RqeWeci5ZR/Lv4MR0sA0FfDOMg5f9O1t4+KZrQ9e5x5sU9VqJ6V/3vB6V8g1QXQx6wX9e6Z6Zq7Z9X+4Qw6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Custom CSS-->
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+  <link rel="icon" href="assets/img/formal1x1.jpg">
+
+  
 </head>
 <body>
-    <h1>Hello, Tenshi</h1>
+  <!-- NAVBAR -->
+  <nav class="site-navbar navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand site-brand" href="#top">Chester D. <small class="text-muted">Aslarona</small></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <button id="themeToggle" class="btn btn-sm btn-outline-secondary ms-2" aria-label="Toggle theme">Theme</button>
+
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="#academics">Academics</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-2"><button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#personalModal">Personal</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <main class="container" id="top">
+    <section class="hero">
+      <div class="profile shadow-sm">
+        <img src="assets/img/formal1x1.jpg" alt="Chester profile" style="width:100%;height:100%;display:block;object-fit:cover">
+      </div>
+      <div class="flex-fill">
+        <h1>Hi — I'm <strong>Chester Barry Dapatnapo</strong></h1>
+        <p class="lead">Web Developer • Laravel enthusiast • Backend &amp; Full‑stack tinkerer. I build friendly, maintainable web apps using modern tools.</p>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="#projects" class="btn btn-primary">View projects</a>
+          <a href="#contact" class="btn btn-outline-secondary">Get in touch</a>
+        </div>
+
+        <div class="mt-3">
+          <h6 class="mb-2">Core Skills</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="skill-badge"><img src="assets/img/logo-laravel.svg" alt="Laravel" class="skill-icon">Laravel</span>
+            <span class="skill-badge"><img src="assets/img/logo-bootstrap.svg" alt="Bootstrap" class="skill-icon">Bootstrap</span>
+            <span class="skill-badge"><img src="assets/img/logo-tailwind.svg" alt="Tailwind" class="skill-icon">Tailwind</span>
+            <span class="skill-badge"><img src="assets/img/logo-php.png" alt="PHP" class="skill-icon">PHP</span>
+            <span class="skill-badge"><img src="assets/img/logo-js.png" alt="JS" class="skill-icon">JavaScript</span>
+            <span class="skill-badge"><img src="assets/img/logo-git.png" alt="Git" class="skill-icon">Git</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS / SPECIALTIES -->
+    <section class="mt-4">
+      <h2 class="section-title">Specialties & Proficiency</h2>
+      <div class="row g-3">
+        <!-- Reuse your existing skills but in a Bootstrap card list -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 h-100">
+            <div class="d-flex align-items-center gap-3">
+              <img src="assets/img/logo-html.png" alt="HTML" style="width:48px;height:48px;object-fit:contain">
+              <div>
+                <h6 class="mb-1">HTML / CSS</h6>
+                <div class="progress" style="height:8px">
+                  <div class="progress-bar bg-success" role="progressbar" style="width:70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small class="muted">70%</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- repeat with other skills (JS, PHP, MySQL, Laravel...) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 h-100">
+            <div class="d-flex align-items-center gap-3">
+              <img src="assets/img/logo-js.png" alt="JS" style="width:48px;height:48px;object-fit:contain">
+              <div>
+                <h6 class="mb-1">JavaScript</h6>
+                <div class="progress" style="height:8px">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width:50%"></div>
+                </div>
+                <small class="muted">50%</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 h-100">
+            <div class="d-flex align-items-center gap-3">
+              <img src="assets/img/logo-php.png" alt="PHP" style="width:48px;height:48px;object-fit:contain">
+              <div>
+                <h6 class="mb-1">PHP / Laravel</h6>
+                <div class="progress" style="height:8px">
+                  <div class="progress-bar bg-primary" role="progressbar" style="width:80%"></div>
+                </div>
+                <small class="muted">80%</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 h-100">
+            <div class="d-flex align-items-center gap-3">
+              <img src="assets/img/logo-sql.svg" alt="MySQL" style="width:48px;height:48px;object-fit:contain">
+              <div>
+                <h6 class="mb-1">MySQL / Databases</h6>
+                <div class="progress" style="height:8px">
+                  <div class="progress-bar bg-info" role="progressbar" style="width:70%"></div>
+                </div>
+                <small class="muted">70%</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 h-100">
+            <div class="d-flex align-items-center gap-3">
+              <img src="assets/img/logo-cpp.png" alt="C++" style="width:48px;height:48px;object-fit:contain">
+              <div>
+                <h6 class="mb-1">C / C++</h6>
+                <div class="progress" style="height:8px">
+                  <div class="progress-bar bg-danger" role="progressbar" style="width:50%"></div>
+                </div>
+                <small class="muted">50%</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 h-100">
+            <div class="d-flex align-items-center gap-3">
+              <img src="assets/img/logo-java.png" alt="Java" style="width:48px;height:48px;object-fit:contain">
+              <div>
+                <h6 class="mb-1">Java / C#</h6>
+                <div class="progress" style="height:8px">
+                  <div class="progress-bar bg-success" role="progressbar" style="width:20%"></div>
+                </div>
+                <small class="muted">20%</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="mt-5" id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="row g-4">
+
+        <!-- Project card example -->
+        <div class="col-md-6 col-lg-4">
+          <article class="card project-card h-100">
+            <img src="assets/img/korteSupremaProject.png" class="card-img-top" alt="Legal Case Management">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Legal Case Management System</h5>
+              <p class="card-text muted">Fully functional system with users, hierarchy, messaging, CRUD, and search.</p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <a class="btn btn-sm btn-primary" href="#">View</a>
+                <small class="text-muted">Laravel, PHP, MySQL</small>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <article class="card project-card h-100">
+            <img src="assets/img/brgysystem.png" class="card-img-top" alt="Barangay CRUD">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">CRUD w/ auto Database</h5>
+              <p class="card-text muted">Barangay themed CRUD with convenience features and automation.</p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <a class="btn btn-sm btn-primary" href="#">Demo</a>
+                <small class="text-muted">Bootstrap, JavaScript</small>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <article class="card project-card h-100">
+            <img src="assets/img/airamsite.png" class="card-img-top" alt="Airam">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">AIRAM (Make up site)</h5>
+              <p class="card-text muted">Frontend focused site with client-side product CRUD & sort.</p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <a class="btn btn-sm btn-primary" href="https://chesbarr.github.io/AIRAM_Uploaded/" target="_blank">Open</a>
+                <small class="text-muted">HTML, JS</small>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- add more project cards similarly -->
+
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="mt-5" id="achievements">
+      <h2 class="section-title">Achievements</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card p-3 text-center h-100">
+            <img src="assets/img/progchampionbcp.jpg" alt="Programming Champion" style="height:120px;object-fit:cover;margin-bottom:1rem">
+            <h6>Programming Champion</h6>
+            <p class="muted small">Won a programming competition at Bestlink College</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card p-3 text-center h-100">
+            <img src="assets/img/ama-second-place-quiz-bee.jpg" alt="Quiz Bee" style="height:120px;object-fit:cover;margin-bottom:1rem">
+            <h6>2nd Place Quiz Bee</h6>
+            <p class="muted small">AMA University — Grade 11</p>
+          </div>
+        </div>
+        <!-- more cards -->
+      </div>
+    </section>
+
+    <!-- ACADEMICS (kept but responsive) -->
+    <section class="mt-5 mb-5" id="academics">
+      <h2 class="section-title">Academics</h2>
+      <div class="accordion" id="academicsAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">Grades & Performance</button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#academicsAccordion">
+            <div class="accordion-body">
+              <div class="table-responsive">
+                <!-- keep original table but wrapped for responsiveness -->
+                <table class="table table-sm">
+                  <thead class="table-light">
+                    <tr><th>Subject</th><th>1</th><th>2</th><th>Final</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Earth Science</td><td>84</td><td>88</td><td>86</td></tr>
+                    <tr><td>Empowerment Technologies</td><td>87</td><td>74</td><td>81</td></tr>
+                    <!-- shortened for demo, keep full content in your copy -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / FOOTER INFO -->
+    <section class="mt-5 mb-5" id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="muted">Email <a href="mailto:dapatnapochesterbarry@gmail.com">dapatnapochesterbarry@gmail.com</a> • Phone <a href="tel:09685418437">09685418437</a></p>
+          <div class="mt-3 d-flex gap-2">
+            <a href="https://github.com/ChesBarr" class="btn btn-outline-dark btn-sm" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/chesteraslarona.dapatnapo" class="btn btn-outline-primary btn-sm" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/chesterdapatnapo/" class="btn btn-outline-danger btn-sm" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-md-6 text-md-end mt-3 mt-md-0">
+          <small class="muted">"It's not about getting 6 in dice with first roll — it's about rolling the dice until you get 6" — joma</small>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BOOTSTRAP MODAL (Personal details) -->
+  <div class="modal fade" id="personalModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Personal Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-4 text-center">
+              <img src="assets/img/me17.jpg" alt="Chester" style="width:160px;height:160px;object-fit:cover;border-radius:8px;">
+            </div>
+            <div class="col-md-8">
+              <dl class="row">
+                <dt class="col-sm-4">First Name</dt><dd class="col-sm-8">Chester Barry</dd>
+                <dt class="col-sm-4">Last Name</dt><dd class="col-sm-8">Dapatnapo</dd>
+                <dt class="col-sm-4">Middle Name</dt><dd class="col-sm-8">Aslarona</dd>
+                <dt class="col-sm-4">Birthday</dt><dd class="col-sm-8">07/21/2003</dd>
+                <dt class="col-sm-4">Email</dt><dd class="col-sm-8"><a href="mailto:dapatnapochesterbarry@gmail.com">dapatnapochesterbarry@gmail.com</a></dd>
+                <dt class="col-sm-4">Address</dt><dd class="col-sm-8">Novaliches Brgy. Bagbag Quezon City</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="https://chesbarr.github.io/Personal-Homepage/index.html" target="_blank" class="btn btn-primary">Open personal homepage</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>Contact</h5>
+          <p class="muted">Email: <a href="mailto:dapatnapochesterbarry@gmail.com">dapatnapochesterbarry@gmail.com</a><br>Phone: <a href="tel:09685418437">09685418437</a></p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="mb-0">&copy; <span id="year"></span> Chester D. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+
 </body>
 </html>
