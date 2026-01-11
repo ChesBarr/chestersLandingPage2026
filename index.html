@@ -1,330 +1,739 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chester Dapatnapo — Portfolio</title>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Chester Dapatnapo — Portfolio</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font (Inter) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <!-- Font Awesome for social icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-k6RqeWeci5ZR/Lv4MR0sA0FfDOMg5f9O1t4+KZrQ9e5x5sU9VqJ6V/3vB6V8g1QXQx6wX9e6Z6Zq7Z9X+4Qw6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Custom CSS-->
-  <link rel="stylesheet" href="assets/css/custom.css">
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<!-- Font (Inter) -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Font Awesome for social icons -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+			integrity="sha512-k6RqeWeci5ZR/Lv4MR0sA0FfDOMg5f9O1t4+KZrQ9e5x5sU9VqJ6V/3vB6V8g1QXQx6wX9e6Z6Zq7Z9X+4Qw6g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<!-- Custom CSS-->
+		<link rel="stylesheet" href="assets/css/custom.css" />
 
-  <link rel="icon" href="assets/img/formal1x1.jpg">
+		<link rel="icon" href="assets/img/formal1x1.jpg" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+		/>
+	</head>
+	<body>
+		<!-- NAVBAR -->
+		<nav
+			class="site-navbar navbar navbar-expand-lg navbar-dark sticky-top shadow-sm"
+		>
+			<div class="container">
+				<a class="navbar-brand site-brand" href="#top"
+					>Chester Barry <small class="text-muted">Aslarona</small> Dapatnapo</a
+				>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navMenu"
+					aria-controls="navMenu"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-</head>
-<body>
-  <!-- NAVBAR -->
-  <nav class="site-navbar navbar navbar-expand-lg navbar-dark sticky-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand site-brand" href="#top">Chester <small class="text-muted">Aslarona</small> Dapatnapo</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+				<!-- Temporary disable theme toggle due top being buggy -->
+				<!-- <button id="themeToggle" class="btn btn-sm btn-outline-secondary ms-2" aria-label="Toggle theme">&#9728;</button> -->
 
-      <!-- Temporary disable theme toggle due top being buggy -->
-      <!-- <button id="themeToggle" class="btn btn-sm btn-outline-secondary ms-2" aria-label="Toggle theme">&#9728;</button> -->
+				<div class="collapse navbar-collapse" id="navMenu">
+					<ul class="navbar-nav ms-auto align-items-lg-center">
+						<li class="nav-item">
+							<a class="nav-link" href="#documents">Documents</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#skills">Skills</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#projects">Projects</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#achievements">Achievements</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#socials">Socials</a>
+						</li>
+						<li class="nav-item ms-2">
+							<button
+								class="btn btn-outline-primary btn-sm"
+								data-bs-toggle="modal"
+								data-bs-target="#personalModal"
+							>
+								About me
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
+		<!-- HERO -->
+		<main class="container" id="top">
+			<section class="hero">
+				<div class="profile shadow-sm">
+					<img
+						src="assets/img/formal1x1.jpg"
+						alt="Chester profile"
+						style="width: 100%; height: 100%; display: block; object-fit: cover"
+					/>
+				</div>
 
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
-          <li class="nav-item"><a class="nav-link" href="#academics">Academics</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item ms-2"><button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#personalModal">About me</button></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+				<div class="flex-fill">
+					<h1>Hi — I'm <strong>Chester Barry A. Dapatnapo</strong></h1>
+					<p class="lead">
+						Web Developer • Laravel • Backend &amp; Full-stack tinkerer.
+						<br /><br />
+						A still-learning college student with a desire to improve. Motivated
+						to contribute to society and curious about trying new things. Have
+						done small projects for academic purposes, honing my skills for
+						future opportunities. A very good communicator, strategist, and
+						critical thinker with leadership potential. I take risks in exchange
+						for hard work and consistency—beneficial for the long term.
+					</p>
 
-  <!-- HERO -->
-  <main class="container" id="top">
-    <section class="hero">
-        <div class="profile shadow-sm">
-            <img src="assets/img/formal1x1.jpg" alt="Chester profile" style="width:100%;height:100%;display:block;object-fit:cover">
-        </div>
+					<div class="d-flex flex-wrap gap-2">
+						<a href="#projects" class="btn btn-primary">Projects</a>
+						<a href="#socials" class="btn btn-outline-secondary">&#9742;</a>
+					</div>
+				</div>
+			</section>
 
-        <div class="flex-fill">
-            <h1>Hi — I'm <strong>Chester Barry Dapatnapo</strong></h1>
-            <p class="lead">
-                Web Developer • Laravel • Backend &amp; Full-stack tinkerer.
-                <br><br>
-                A still-learning college student with a desire to improve. Motivated to contribute to society and curious about trying new things. Have done small projects for academic purposes, honing my skills for future opportunities. A very good communicator, strategist, and critical thinker with leadership potential. I take risks in exchange for hard work and consistency—beneficial for the long term.
-            </p>
+			<!-- DOCUMENTS (compact download links) -->
+			<section class="mt-5" id="documents">
+				<div class="d-flex align-items-center justify-content-between">
+					<h2 class="section-title mb-0">Documents</h2>
+					<button
+						class="btn btn-outline-secondary btn-sm"
+						data-bs-toggle="collapse"
+						data-bs-target="#docsCollapse"
+						aria-expanded="true"
+						aria-controls="docsCollapse"
+					>
+						&#128065;
+					</button>
+				</div>
 
-            <div class="d-flex flex-wrap gap-2">
-                <a href="#projects" class="btn btn-primary">Projects</a>
-                <a href="#contact" class="btn btn-outline-secondary">&#9742;</a>
-            </div>
-        </div>
-    </section>
+				<div id="docsCollapse" class="collapse show mt-3">
+					<ul class="list-unstyled docs-list">
+						<!-- Document Links -->
+						<li class="d-flex align-items-center justify-content-between py-2">
+							<div class="d-flex align-items-center gap-2">
+								<i class="bi bi-file-earmark-pdf doc-icon"></i>
+								<div>
+									<strong>Resume — Chester Dapatnapo</strong><br />
+									<small class="text-muted">Resume (PDF)</small>
+								</div>
+							</div>
+							<div>
+								<a
+									href="assets/docs/ChesterDapatnapoCV2026.pdf"
+									class="btn btn-sm btn-primary"
+									download
+									rel="noopener"
+									aria-label="Download Resume (PDF)"
+									>Download</a
+								>
+							</div>
+						</li>
 
-    
-    <!-- SKILLS -->
-    <section class="mt-4" id="skills">
-        <div class="d-flex align-items-center justify-content-between">
-            <h2 class="section-title mb-0">Skills</h2>
-            <button class="btn btn-outline-secondary btn-sm"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#skillsCollapse"
-                    aria-expanded="true"
-                    aria-controls="skillsCollapse">
-            &#128065;
-            </button>
-        </div>
+						<li class="d-flex align-items-center justify-content-between py-2">
+							<div class="d-flex align-items-center gap-2">
+								<i class="bi bi-file-earmark-ppt doc-icon"></i>
+								<div>
+									<strong>OJT Acceptance Letter</strong><br />
+									<small class="text-muted">Acceptance Letter (DOCX)</small>
+								</div>
+							</div>
+							<div>
+								<a
+									href="assets/docs/OJT_ACCEPTANCE_LETTER_DAPATNAPO.docx"
+									class="btn btn-sm btn-primary"
+									download
+									rel="noopener"
+									aria-label="Download Acceptance Letter (DOCX)"
+									>Download</a
+								>
+							</div>
+						</li>
 
-        <div id="skillsCollapse" class="collapse show mt-3">
-            <div class="d-flex flex-wrap gap-2">
-                <span class="skill-badge"><img src="assets/img/logo-laravel.png" class="skill-icon" alt="Laravel">Laravel</span>
-                <span class="skill-badge"><img src="assets/img/logo-phpmyadmin.png" class="skill-icon" alt="PhpMyAdmin">PhpMyAdmin</span>
-                <span class="skill-badge"><img src="assets/img/logo-sql.svg" class="skill-icon" alt="MySQL">MySQL</span>
-                <span class="skill-badge"><img src="assets/img/logo-digitalocean.png" class="skill-icon" alt="DigitalOcean">DigitalOcean</span>
-                <span class="skill-badge"><img src="assets/img/logo-tailwind.png" class="skill-icon" alt="Tailwind">Tailwind</span>
-                <span class="skill-badge"><img src="assets/img/logo-bootstrap.jpg" class="skill-icon" alt="Bootstrap">Bootstrap</span>
-            </div>
-        </div>
-    </section>
-    
+						<li class="d-flex align-items-center justify-content-between py-2">
+							<div class="d-flex align-items-center gap-2">
+								<i class="bi bi-file-earmark-ppt doc-icon"></i>
+								<div>
+									<strong>OJT Recommendation Letter</strong><br />
+									<small class="text-muted">Recommendation Letter (DOCX)</small>
+								</div>
+							</div>
+							<div>
+								<a
+									href="assets/docs/OJT_RECOMMENDATION_DAPATNAPO.docx"
+									class="btn btn-sm btn-primary"
+									download
+									rel="noopener"
+									aria-label="Download Recommendation Letter (DOCX)"
+									>Download</a
+								>
+							</div>
+						</li>
 
-    <!-- PROJECTS -->
-    <section class="mt-5" id="projects">
-      <div class="d-flex align-items-center justify-content-between">
-        <h2 class="section-title mb-0">Projects</h2>
-        <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="collapse" data-bs-target="#projectsCollapse" aria-expanded="true" aria-controls="projectsCollapse">
-        &#128065;
-        </button>
-      </div>
+						<!-- add more items in same pattern -->
+					</ul>
+				</div>
+			</section>
 
-      <div id="projectsCollapse" class="collapse show mt-3">
-        <div class="row g-4">
+			<!-- SKILLS -->
+			<section class="mt-5" id="skills">
+				<div class="d-flex align-items-center justify-content-between">
+					<h2 class="section-title mb-0">Skills</h2>
+					<button
+						class="btn btn-outline-secondary btn-sm"
+						data-bs-toggle="collapse"
+						data-bs-target="#skillsCollapse"
+						aria-expanded="true"
+						aria-controls="skillsCollapse"
+					>
+						&#128065;
+					</button>
+				</div>
 
-        <!-- Project cards -->
-        <div class="col-md-6 col-lg-4">
-          <article class="card project-card h-100">
-            <img src="assets/img/korteSupremaProject.png" class="card-img-top" alt="Legal Case Management">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Legal Case Management System</h5>
-              <p class="card-text muted">
-                Simple fully functional Legal Case Management System<br>
-                User, Admin, Staff, Hierarchy System<br>
-                Simple Messaging System
-                Case CRUD and Assigning<br>
-                Search Query.
-              </p>
-              <div class="mt-auto d-flex justify-content-between align-items-center">
-                <button class="btn btn-sm btn-secondary" disabled aria-disabled="true" title="Not available yet">Unavailable</button>
-                <small class="text-muted">PHP, MySQL</small>
-              </div>
-            </div>
-          </article>
-        </div>
+				<div id="skillsCollapse" class="collapse show mt-3">
+					<div class="d-flex flex-wrap gap-2">
+						<span class="skill-badge"
+							><img
+								src="assets/img/LAMP-Stack-logo.png"
+								class="skill-icon"
+								alt="LAMP stack"
+							/>LAMP stack</span
+						>
+						<span class="skill-badge"
+							><img
+								src="assets/img/logo-laravel.png"
+								class="skill-icon"
+								alt="Laravel"
+							/>Laravel</span
+						>
+						<span class="skill-badge"
+							><img
+								src="assets/img/logo-phpmyadmin.png"
+								class="skill-icon"
+								alt="PhpMyAdmin"
+							/>PhpMyAdmin</span
+						>
+						<span class="skill-badge"
+							><img
+								src="assets/img/logo-sql.svg"
+								class="skill-icon"
+								alt="MySQL"
+							/>MySQL</span
+						>
+						<span class="skill-badge"
+							><img
+								src="assets/img/logo-digitalocean.png"
+								class="skill-icon"
+								alt="DigitalOcean"
+							/>DigitalOcean</span
+						>
+						<span class="skill-badge"
+							><img
+								src="assets/img/logo-tailwind.png"
+								class="skill-icon"
+								alt="Tailwind"
+							/>Tailwind</span
+						>
+						<span class="skill-badge"
+							><img
+								src="assets/img/logo-bootstrap.jpg"
+								class="skill-icon"
+								alt="Bootstrap"
+							/>Bootstrap</span
+						>
+					</div>
+				</div>
+			</section>
 
-        <div class="col-md-6 col-lg-4">
-          <article class="card project-card h-100">
-            <img src="assets/img/brgysystem.png" class="card-img-top" alt="Barangay CRUD">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">CRUD w/ auto Database</h5>
-              <p class="card-text muted">CRUD with convenience features and automation, modified for convenience.</p>
-              <div class="mt-auto d-flex justify-content-between align-items-center">
-                <button class="btn btn-sm btn-secondary" disabled aria-disabled="true" title="Not available yet">Unavailable</button>
-                <small class="text-muted">Bootstrap, Php, MySQL</small>
-              </div>
-            </div>
-          </article>
-        </div>
+			<!-- PROJECTS -->
+			<section class="mt-5" id="projects">
+				<div class="d-flex align-items-center justify-content-between">
+					<h2 class="section-title mb-0">Projects</h2>
+					<button
+						class="btn btn-outline-secondary btn-sm"
+						data-bs-toggle="collapse"
+						data-bs-target="#projectsCollapse"
+						aria-expanded="true"
+						aria-controls="projectsCollapse"
+					>
+						&#128065;
+					</button>
+				</div>
 
-        <div class="col-md-6 col-lg-4">
-          <article class="card project-card h-100">
-            <img src="assets/img/airamsite.png" class="card-img-top" alt="Airam">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">AIRAM (Make up site)</h5>
-              <p class="card-text muted">Frontend focused site with client-side product CRUD & sort.</p>
-              <div class="mt-auto d-flex justify-content-between align-items-center">
-                <a class="btn btn-sm btn-primary" href="https://chesbarr.github.io/AIRAM_Uploaded/" target="_blank">Go to Repo&#8594;</a>
-                <small class="text-muted">HTML, JS</small>
-              </div>
-            </div>
-          </article>
-        </div>
+				<div id="projectsCollapse" class="collapse show mt-3">
+					<div class="row g-4">
+						<!-- Project cards -->
+						<div class="col-md-6 col-lg-4">
+							<article class="card project-card h-100">
+								<img
+									src="assets/img/capstone.png"
+									class="card-img-top"
+									alt=""
+								/>
+								<div class="card-body d-flex flex-column">
+									<h5 class="card-title">Microfinance > HR2</h5>
+									<p class="card-text muted">
+										Our Capstone Project<br>
+										Our Department has modules: Training, Learning, Competency, Succession, and Employee Self-Service
+									</p>
+									
+									<div class="mt-auto d-flex justify-content-between align-items-center">
+										<a class="btn btn-sm btn-primary" href="https://github.com/ChirVan/opvenio-hr2" target="_blank">
+											Github&#8594;
+										</a>
+										<a class="btn btn-sm btn-outline-primary" href="https://drive.google.com/drive/folders/1WwxUzAUwNnpyAOEvI6hYPnyhf0IuVu8C?usp=sharing" download rel="noopener" aria-label="Download project report">
+											Documentation
+										</a>
+										<small class="text-muted"
+											>Laravel, MySQL, Bootstrap</small
+										>
+									</div>
+								</div>
+							</article>
+						</div>
 
-        <div class="col-md-6 col-lg-4">
-          <article class="card project-card h-100">
-            <img src="assets/img/cppquizproject.png" class="card-img-top" alt="Airam">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">C++ Quiz System</h5>
-              <p class="card-text muted">
-                My very first big project:<br> 
-                C++ Project with a Log-in System<br> 
-                Tracks their scores and their attempts<br> 
-                Re-attempt and clear choices<br> 
-                Accurate zodiac and age only by Birthdate<br> 
-                Scoreboard: displays a leaderbaord
-              </p>
-              <div class="mt-auto d-flex justify-content-between align-items-center">
-                <button class="btn btn-sm btn-secondary" disabled aria-disabled="true" title="Not available yet">Unavailable</button>
-                <small class="text-muted">C++</small>
-              </div>
-            </div>
-          </article>
-        </div>
+						<div class="col-md-6 col-lg-4">
+							<article class="card project-card h-100">
+								<img
+									src="assets/img/librewhan.png"
+									class="card-img-top"
+									alt="Librewhan, Order System"
+								/>
+								<div class="card-body d-flex flex-column">
+									<h5 class="card-title">Librewhan, Order System</h5>
+									<p class="card-text muted">
+										A fully deployed project designed for taking and tracking
+										orders, visit <a href="https://www.facebook.com/profile.php?id=61563066213914">Librewhan here</a>.
+									</p>
+									
+									<div class="mt-auto d-flex justify-content-between align-items-center">
+										<a class="btn btn-sm btn-primary" href="https://github.com/ChesAslar/librewhan" target="_blank">
+											Github&#8594;
+										</a>
+										<a class="btn btn-sm btn-outline-primary" href="https://drive.google.com/drive/folders/1KwtkdlT-ss2nYeBBReT7daIS5Pnw-PJ_?usp=drive_link" download rel="noopener" aria-label="Download project report">
+											Documentation
+										</a>
+										<small class="text-muted">
+											Laravel, MySQL, Bootstrap, DigitalOcean
+										</small>
+									</div>
+								</div>
+							</article>
+						</div>
 
-        <!-- add more project cards similarly -->
-        </div>
-      </div>
-    </section>
+						<div class="col-md-6 col-lg-4">
+							<article class="card project-card h-100">
+								<img
+									src="assets/img/homemadesystem.jpg"
+									class="card-img-top"
+									alt="Legal Case Management"
+								/>
+								<div class="card-body d-flex flex-column">
+									<h5 class="card-title">Template System</h5>
+									<p class="card-text muted">
+										A template project for starting systems<br>
+										Similar to Laravel but uses no framework<br>
+										Has Log-in<br>
+										RBAC System<br>
+										User Management<br> 
+									</p>
+									<div class="mt-auto d-flex justify-content-between align-items-center">
+										<!-- <button class="btn btn-sm btn-secondary" disabled aria-disabled="true" title="Not available yet">
+											Unavailable
+										</button> -->
+										<a class="btn btn-sm btn-primary" href="https://github.com/ChesBarr/Homemade-System" target="_blank">
+											Github&#8594;
+										</a>
+										<small class="text-muted">PHP, MySQL, Bootstrap</small>
+									</div>
+								</div>
+							</article>
+						</div>
 
-    <!-- ACHIEVEMENTS -->
-    <section class="mt-5" id="achievements">
-      <div class="d-flex align-items-center justify-content-between">
-        <h2 class="section-title mb-0">Achievements</h2>
-        <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="collapse" data-bs-target="#achievementsCollapse" aria-expanded="true" aria-controls="achievementsCollapse">
-        &#128065;
-        </button>
-      </div>
+						<div class="col-md-6 col-lg-4">
+							<article class="card project-card h-100">
+								<img
+									src="assets/img/korteSupremaProject.png"
+									class="card-img-top"
+									alt="Legal Case Management"
+								/>
+								<div class="card-body d-flex flex-column">
+									<h5 class="card-title">Legal Case Management System</h5>
+									<p class="card-text muted">
+										Simple fully functional Legal Case Management System<br />
+										User, Admin, Staff, Hierarchy System<br />
+										Simple Messaging System Case CRUD and Assigning<br />
+										Search Query.
+									</p>
+									<div class="mt-auto d-flex justify-content-between align-items-center">
+										<!-- <button class="btn btn-sm btn-secondary" disabled aria-disabled="true" title="Not available yet">
+											Unavailable
+										</button> -->
+										<a class="btn btn-sm btn-primary" href="https://github.com/ChesBarr/LegalCaseMS" target="_blank">
+											Github&#8594;
+										</a>
+										<small class="text-muted">PHP, MySQL</small>
+									</div>
+								</div>
+							</article>
+						</div>
 
-      <div id="achievementsCollapse" class="collapse show mt-3">
-        <div class="row g-4">
+						<div class="col-md-6 col-lg-4">
+							<article class="card project-card h-100">
+								<img
+									src="assets/img/brgysystem.png"
+									class="card-img-top"
+									alt="Barangay CRUD"
+								/>
+								<div class="card-body d-flex flex-column">
+									<h5 class="card-title">CRUD w/ auto Database</h5>
+									<p class="card-text muted">
+										CRUD with convenience features and automation, modified for
+										convenience.
+									</p>
+									<div
+										class="mt-auto d-flex justify-content-between align-items-center"
+									>
+										<button
+											class="btn btn-sm btn-secondary"
+											disabled
+											aria-disabled="true"
+											title="Not available yet"
+										>
+											Unavailable
+										</button>
+										<small class="text-muted">Bootstrap, Php, MySQL</small>
+									</div>
+								</div>
+							</article>
+						</div>
 
-        <!-- Achievement Cards -->
-        <div class="col-md-6 col-lg-3">
-          <div class="card p-3 text-center h-100">
-            <img src="assets/img/progchampionbcp.jpg" alt="Programming Champion" style="height:120px;object-fit:cover;margin-bottom:1rem">
-            <h6>Programming Champion</h6>
-            <p class="muted small">Won a programming competition at Bestlink College</p>
-          </div>
-        </div>
+						<div class="col-md-6 col-lg-4">
+							<article class="card project-card h-100">
+								<img
+									src="assets/img/airamsite.png"
+									class="card-img-top"
+									alt="Airam"
+								/>
+								<div class="card-body d-flex flex-column">
+									<h5 class="card-title">AIRAM (Make up site)</h5>
+									<p class="card-text muted">
+										Frontend focused site with client-side product CRUD & sort.
+									</p>
+									<div
+										class="mt-auto d-flex justify-content-between align-items-center"
+									>
+										<a
+											class="btn btn-sm btn-primary"
+											href="https://chesbarr.github.io/AIRAM_Uploaded/"
+											target="_blank"
+											>Go to Site&#8594;</a
+										>
+										<small class="text-muted">HTML, JS</small>
+									</div>
+								</div>
+							</article>
+						</div>
 
-        <div class="col-md-6 col-lg-3">
-          <div class="card p-3 text-center h-100">
-            <img src="assets/img/ama-second-place-quiz-bee.jpg" alt="Quiz Bee" style="height:120px;object-fit:cover;margin-bottom:1rem">
-            <h6>2nd Place Quiz Bee</h6>
-            <p class="muted small">Won 2nd Place in a Quiz Bee event at AMA University</p>
-          </div>
-        </div>
+						<div class="col-md-6 col-lg-4">
+							<article class="card project-card h-100">
+								<img
+									src="assets/img/cppquizproject.png"
+									class="card-img-top"
+									alt="Airam"
+								/>
+								<div class="card-body d-flex flex-column">
+									<h5 class="card-title">C++ Quiz System</h5>
+									<p class="card-text muted">
+										My very first big project:<br />
+										C++ Project with a Log-in System<br />
+										Tracks their scores and their attempts<br />
+										Re-attempt and clear choices<br />
+										Accurate zodiac and age only by Birthdate<br />
+										Scoreboard: displays a leaderbaord
+									</p>
+									<div class="mt-auto d-flex justify-content-between align-items-center">
+										<a class="btn btn-sm btn-primary" href="https://drive.google.com/drive/folders/1daIhKEtr3Kfy5aipJwJOrjhG6y6JQBaW?usp=sharing" target="_blank">
+											Gdrive&#8594;
+										</a>
+										<small class="text-muted">C++</small>
+									</div>
+								</div>
+							</article>
+						</div>
 
-        <div class="col-md-6 col-lg-3">
-          <div class="card p-3 text-center h-100">
-            <img src="assets/img/bcp-mayor-certificate.jpg" alt="Bcp Mayor" style="height:120px;object-fit:cover;margin-bottom:1rem">
-            <h6>Class Mayor</h6>
-            <p class="muted small">Became a class Mayor in Bestlink College</p>
-          </div>
-        </div>
+						<!-- add more project cards similarly -->
+					</div>
+				</div>
+			</section>
 
-        <div class="col-md-6 col-lg-3">
-          <div class="card p-3 text-center h-100">
-            <img src="assets/img/comm-service-nstp.jpg" alt="Community Service" style="height:120px;object-fit:cover;margin-bottom:1rem">
-            <h6>Class Mayor</h6>
-            <p class="muted small">Conducted a Community Service project for NSTP</p>
-          </div>
-        </div>
+			<!-- ACHIEVEMENTS -->
+			<section class="mt-5" id="achievements">
+				<div class="d-flex align-items-center justify-content-between">
+					<h2 class="section-title mb-0">Achievements</h2>
+					<button
+						class="btn btn-outline-secondary btn-sm"
+						data-bs-toggle="collapse"
+						data-bs-target="#achievementsCollapse"
+						aria-expanded="true"
+						aria-controls="achievementsCollapse"
+					>
+						&#128065;
+					</button>
+				</div>
 
-        <!-- add more achievement cards similarly -->
-        </div>
-      </div>
-    </section>
+				<div id="achievementsCollapse" class="collapse show mt-3">
+					<div class="row g-4">
+						<!-- Achievement Cards -->
+						<div class="col-md-6 col-lg-3">
+							<div class="card p-3 text-center h-100">
+								<img
+									src="assets/img/progchampionbcp.jpg"
+									alt="Programming Champion"
+									style="height: 120px; object-fit: cover; margin-bottom: 1rem"
+								/>
+								<h6>Programming Champion</h6>
+								<p class="muted small">
+									Won a programming competition at Bestlink College
+								</p>
+							</div>
+						</div>
 
-    <!-- CONTACT / SOCIALS -->
-    <section class="mt-5 mb-5" id="contact">
-  <div class="d-flex align-items-center justify-content-between">
-    <h2 class="section-title mb-0">Socials</h2>
-    <button class="btn btn-outline-secondary btn-sm"
-            data-bs-toggle="collapse"
-            data-bs-target="#socialsCollapse"
-            aria-expanded="true"
-            aria-controls="socialsCollapse">&#128065;</button>
-  </div>
+						<div class="col-md-6 col-lg-3">
+							<div class="card p-3 text-center h-100">
+								<img
+									src="assets/img/ama-second-place-quiz-bee.jpg"
+									alt="Quiz Bee"
+									style="height: 120px; object-fit: cover; margin-bottom: 1rem"
+								/>
+								<h6>2nd Place Quiz Bee</h6>
+								<p class="muted small">
+									Won 2nd Place in a Quiz Bee event at AMA University
+								</p>
+							</div>
+						</div>
 
-  <div id="socialsCollapse" class="collapse show mt-3">
-    <div class="row">
-      <div class="col-md-6">
-        <p class="muted">Find me on</p>
-        <div class="mt-3 d-flex gap-2 flex-wrap">
-          <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" class="btn btn-outline-primary btn-sm social-btn" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <i class="bi bi-linkedin"></i>
-          </a>
+						<div class="col-md-6 col-lg-3">
+							<div class="card p-3 text-center h-100">
+								<img
+									src="assets/img/bcp-mayor-certificate.jpg"
+									alt="Bcp Mayor"
+									style="height: 120px; object-fit: cover; margin-bottom: 1rem"
+								/>
+								<h6>Class Mayor</h6>
+								<p class="muted small">
+									Became a class Mayor in Bestlink College
+								</p>
+							</div>
+						</div>
 
-          <a href="https://github.com/ChesBarr" class="btn btn-outline-dark btn-sm social-btn" target="_blank" rel="noopener" aria-label="GitHub">
-            <i class="bi bi-github"></i>
-          </a>
+						<div class="col-md-6 col-lg-3">
+							<div class="card p-3 text-center h-100">
+								<img
+									src="assets/img/comm-service-nstp.jpg"
+									alt="Community Service"
+									style="height: 120px; object-fit: cover; margin-bottom: 1rem"
+								/>
+								<h6>Community Service</h6>
+								<p class="muted small">
+									Conducted a Community Service project for NSTP
+								</p>
+							</div>
+						</div>
 
-          <a href="https://www.facebook.com/chesteraslarona.dapatnapo" class="btn btn-outline-primary btn-sm social-btn" target="_blank" rel="noopener" aria-label="Facebook">
-            <i class="bi bi-facebook"></i>
-          </a>
+						<!-- add more achievement cards similarly -->
+					</div>
+				</div>
+			</section>
 
-          <a href="https://www.kalibrr.com/applicant/profile/YOUR_KALIBRR" class="btn btn-outline-info btn-sm social-btn" target="_blank" rel="noopener" aria-label="Kalibrr">
-            <i class="bi bi-briefcase"></i>
-          </a>
-        </div>
-      </div>
+			<!-- SOCIALS -->
+			<section class="mt-5 mb-5" id="socials">
+				<div class="d-flex align-items-center justify-content-between">
+					<h2 class="section-title mb-0">Socials</h2>
+					<button
+						class="btn btn-outline-secondary btn-sm"
+						data-bs-toggle="collapse"
+						data-bs-target="#socialsCollapse"
+						aria-expanded="true"
+						aria-controls="socialsCollapse"
+					>
+						&#128065;
+					</button>
+				</div>
 
-      <div class="col-md-6 text-md-end mt-3 mt-md-0">
-        <small class="muted">Make your own future, don't wait for it — Chester</small>
-      </div>
-    </div>
-  </div>
-</section>
+				<div id="socialsCollapse" class="collapse show mt-3">
+					<div class="row">
+						<div class="col-md-6">
+							<p class="muted">Find me on</p>
+							<div class="mt-3 d-flex gap-2 flex-wrap">
+								<a
+									href="https://www.linkedin.com/in/YOUR_LINKEDIN"
+									class="btn btn-outline-primary btn-sm social-btn"
+									target="_blank"
+									rel="noopener"
+									aria-label="LinkedIn"
+								>
+									<i class="bi bi-linkedin"></i>
+								</a>
 
+								<a
+									href="https://github.com/ChesBarr"
+									class="btn btn-outline-dark btn-sm social-btn"
+									target="_blank"
+									rel="noopener"
+									aria-label="GitHub"
+								>
+									<i class="bi bi-github"></i>
+								</a>
 
-  </main>
+								<a
+									href="https://www.facebook.com/chesteraslarona.dapatnapo"
+									class="btn btn-outline-primary btn-sm social-btn"
+									target="_blank"
+									rel="noopener"
+									aria-label="Facebook"
+								>
+									<i class="bi bi-facebook"></i>
+								</a>
 
-  <!-- BOOTSTRAP MODAL (Personal details) -->
-  <div class="modal fade" id="personalModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">About me</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="row g-3">
-            <div class="col-md-4 text-center">
-              <img src="assets/img/me17.jpg" alt="Chester" style="width:160px;height:160px;object-fit:cover;border-radius:8px;">
-            </div>
-            <div class="col-md-8">
-              <dl class="row">
-                <dt class="col-sm-4">First Name</dt><dd class="col-sm-8">Chester Barry</dd>
-                <dt class="col-sm-4">Last Name</dt><dd class="col-sm-8">Dapatnapo</dd>
-                <dt class="col-sm-4">Middle Name</dt><dd class="col-sm-8">Aslarona</dd>
-                <dt class="col-sm-4">Birthday</dt><dd class="col-sm-8">07/21/2003</dd>
-                <dt class="col-sm-4">Email</dt><dd class="col-sm-8"><a href="mailto:chesterdapatnapopro@gmail.com">chesterdapatnapopro@gmail.com</a></dd>
-                <dt class="col-sm-4">Address</dt><dd class="col-sm-8">Novaliches Brgy. Bagbag Quezon City</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <a href="https://chesbarr.github.io/Personal-Homepage/index.html" target="_blank" class="btn btn-primary">Open personal homepage</a>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+								<a
+									href="https://www.kalibrr.com/applicant/profile/YOUR_KALIBRR"
+									class="btn btn-outline-info btn-sm social-btn"
+									target="_blank"
+									rel="noopener"
+									aria-label="Kalibrr"
+								>
+									<i class="bi bi-briefcase"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h5>Contact</h5>
-          <p class="muted">Email: <a href="mailto:chesterdapatnapopro@gmail.com">chesterdapatnapopro@gmail.com</a><br>Phone: <a href="tel:09685418437">09685418437</a></p>
-        </div>
-        <div class="col-md-6 text-md-end">
-          <p class="mb-0">&copy; <span id="year"></span> Chester D. All rights reserved.</p>
-        </div>
-      </div>
-    </div>
-  </footer>
+		<!-- BOOTSTRAP MODAL (Personal details) -->
+		<div class="modal fade" id="personalModal" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">About me</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body">
+						<div class="row g-3">
+							<div class="col-md-4 text-center">
+								<img
+									src="assets/img/me17.jpg"
+									alt="Chester"
+									style="
+										width: 160px;
+										height: 160px;
+										object-fit: cover;
+										border-radius: 8px;
+									"
+								/>
+							</div>
+							<div class="col-md-8">
+								<dl class="row">
+									<dt class="col-sm-4">First Name</dt>
+									<dd class="col-sm-8">Chester Barry</dd>
+									<dt class="col-sm-4">Last Name</dt>
+									<dd class="col-sm-8">Dapatnapo</dd>
+									<dt class="col-sm-4">Middle Name</dt>
+									<dd class="col-sm-8">Aslarona</dd>
+									<dt class="col-sm-4">Birthday</dt>
+									<dd class="col-sm-8">07/21/2003</dd>
+									<dt class="col-sm-4">Email</dt>
+									<dd class="col-sm-8">
+										<a href="mailto:chesterdapatnapopro@gmail.com"
+											>chesterdapatnapopro@gmail.com</a
+										>
+									</dd>
+									<dt class="col-sm-4">Address</dt>
+									<dd class="col-sm-8">Brgy. San Agustin Novaliches Quezon City</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<a
+							href="https://chesbarr.github.io/Personal-Homepage/index.html"
+							target="_blank"
+							class="btn btn-primary"
+							>Open personal homepage</a
+						>
+						<button
+							type="button"
+							class="btn btn-secondary"
+							data-bs-dismiss="modal"
+						>
+							Close
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/main.js"></script>
+		<!-- FOOTER -->
+		<footer class='pt-5'>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h5>Contact</h5>
+						<p class="muted">
+							Email:
+							<a href="mailto:chesterdapatnapopro@gmail.com"
+								>chesterdapatnapopro@gmail.com</a
+							><br />Phone: <a href="tel:09685418437">09685418437</a>
+						</p>
+					</div>
+					<div class="col-md-6 text-md-end">
+						<p class="mb-0">
+							&copy; <span id="year"></span> Chester D. All rights reserved.
+						</p>
+						<p class="mb-0">
+							Make your own future, don't wait for it — Chester
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
 
-</body>
+		<!-- Bootstrap JS -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
 </html>

@@ -53,4 +53,29 @@ document.addEventListener('DOMContentLoaded', () => {
 //     const isDark = document.documentElement.classList.contains('theme-dark');
 //     setTheme(!isDark);
 //     });
+
+// document preview wiring (append to DOMContentLoaded)
+(function docsPreview(){
+  document.querySelectorAll('.btn-preview').forEach(btn=>{
+    btn.addEventListener('click', (e)=>{
+      const src = btn.dataset.src;
+      const title = btn.dataset.title || 'Document Preview';
+      const modal = new bootstrap.Modal(document.getElementById('docPreviewModal'));
+      document.getElementById('docPreviewTitle').textContent = title;
+      document.getElementById('docPreviewFrame').src = src;
+      const dl = document.getElementById('docDownloadLink');
+      dl.href = src;
+      dl.setAttribute('download', src.split('/').pop());
+      modal.show();
+    });
+  });
+
+  // clear iframe src when modal closed (free memory)
+  const previewModalEl = document.getElementById('docPreviewModal');
+  previewModalEl.addEventListener('hidden.bs.modal', ()=>{
+    document.getElementById('docPreviewFrame').src = '';
+  });
+})();
+
+
 });
